@@ -1,5 +1,16 @@
 [toc]
 
+### 本代码库主要包含的内容
+
+1. 需要被copy的代码
+2. 需要多看几遍的重要知识
+3. 正在学习的方向和进度
+   1. pytorch：跑完了猫狗识别的demo
+   2. 想一想要不要买代理
+      1. kaggle需要用
+      2. googlecodejam & kickstart
+   3. 天池硬盘损坏预测比赛：因为docker调试周期太久，pass
+
 ### 可视化
 
 1. 绘制多图
@@ -75,6 +86,8 @@
 
 ### DL
 
-1. rnn
-2. cnn
+1. pytorch
+   1. 写完了猫狗demo，可以跑下测试机数据去kaggle上交一发
+2. rnn
+3. cnn
 
