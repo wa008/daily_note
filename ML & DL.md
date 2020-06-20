@@ -101,5 +101,8 @@
 2. mlp
    1. 最常见的塔状设计：1024ReLU->512ReLU->256ReLU（来自Coogle推荐系统文章
 3. rnn
+   1. demo写完了，还有个bug
+   2. Embedding
+   3. word2vec
 4. cnn
 
