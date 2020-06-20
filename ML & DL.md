@@ -27,6 +27,7 @@
 
    ```Python
    import matplotlib.pyplot as plt
+   plt.figure(figsize = (20, 5))
    plt.subplot(row, col, i) # row行，col列的大图上，绘制第i个图
    ```
 
