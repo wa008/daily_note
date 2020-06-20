@@ -5,21 +5,8 @@
 1. 需要被copy的代码
 2. 需要多看几遍的重要知识
 3. 正在学习的方向和进度
-   1. pytorch：跑完了猫狗识别的demo
-   2. 想一想要不要买代理
-      1. kaggle需要用
-      2. googlecodejam & kickstart
-   3. 天池硬盘损坏预测比赛：因为docker调试周期太久，pass
-
-### 日常
-
-1. 代理：
-   1. vultr：总被封禁，不稳定
-      1. 可用节点：德国，澳大利亚，西雅图
-      2. ss可用，但德国的节点用了一晚上，就不能用了，ping的通，怀疑是端口被封禁了
-      3. ssr：ss的升级版，调通过，速度特别慢
-      4. v2ray：类似于ssr，没有调通过
-   2. 搬瓦工
+   1. nlp：kaggle上找个基础一点的比赛练手吧，脚踏实地写一段时间。
+   2. pytorch：跑完了猫狗识别的demo，done
 
 ### 可视化
 
@@ -28,7 +15,7 @@
    ```Python
    import matplotlib.pyplot as plt
    plt.figure(figsize = (20, 5))
-   plt.subplot(row, col, i) # row行，col列的大图上，绘制第i个图
+   plt.subplot(row, col, i) # row行, col列的大图上，绘制第i个图
    ```
 
 2. 概率分布图
