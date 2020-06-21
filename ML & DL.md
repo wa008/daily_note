@@ -5,8 +5,8 @@
 1. 需要被copy的代码
 2. 需要多看几遍的重要知识
 3. 正在学习的方向和进度
-   1. nlp：kaggle上找个基础一点的比赛练手吧，脚踏实地写一段时间。
-   2. pytorch：跑完了猫狗识别的demo，done
+   1. nlp：kaggle跟一个nlp的比赛。Spooky Author Identification
+   2. 看书
 
 ### 可视化
 
@@ -46,15 +46,41 @@
    plt.rcParams['figure.dpi'] = 300 #分辨率
    ```
 
+### 工具
+
+1. 结果集成也是有方法的？？
+
+   ```url
+   https://github.com/abhishekkrthakur/pysembler
+   ```
+
+2. 监控内存
+
+   ```python
+   print ("memory persent : {:}".format(psutil.virtual_memory().percent))
+   ```
+
+3. 自动调参工具
+
+   1.  hyperopt
+   2.  GridSearchCV
+
+4. numpy
+
+   1. 矩阵相乘，星乘代表相同位置做乘法，点乘代表矩阵相乘
+
+      ```python
+      c = a * b # 星乘
+      c = a.dot(b) # 点乘
+      c = np.dot(a, b) # 点乘
+      ```
+
 ### ML
 
 1. sklearn
 2. xgboost
 3. lgbm
-4. 自动调参工具
-   1.  hyperopt
-   2. GridSearchCV
-5. 异常检测算法
+4. 异常检测算法
    1. PCA：主成分分析
       1. 利用协方差矩阵提取关键的M维特征，达到降维的目的
    2. MCD: Minimum Covariance Determinant，最小协方差行列式
@@ -68,12 +94,12 @@
    7. ABOD：计算每个样本与所有其他样本对所形成的夹角的方差，异常点因为远离正常点，因此方差变化小。
    8. Isolation Forest：孤立森林
    9. Feature Bagging：笼统的算法
-6. 集成学习
+5. 集成学习
    1. Boosting：对当前训练样本的分布/权重进行调整，使得当前基学习器训错的训练集数据在后续的数据中更受关注（典型：AdaBoost
    2. Bagging：有放回地对训练集进行采样，采N份，训练N个基学习器，求和作为结果，随机森林即用的此种集成方式
    3. Stacking：M条数据，对训练集进行K折交叉验证，使用N个模型进行训练，形成M * N的矩阵，利用新模型重新进行训练，即模型叠加
    4. Blending：类似于Stacking，从训练集中准备一部分数据作为留出集，使用这部分不相交的数据作为Base Model，重新训练
-7. PCA
+6. PCA
    1. 用以下两个衡量标准来降低特征的维度，两个目标的结论一致
       1. 最近重构性：样本点到超平面的距离足够近
       2. 最大可分性：样本点在超平面的投影尽可能分开
@@ -94,3 +120,43 @@
    3. word2vec
 4. cnn
 
+### 不常用
+
+1. 头文件
+
+   ```python
+   #encoding:utf-8
+   import json
+   import time
+   import random
+   import numpy as np
+   import pandas as pd
+   from collections import Counter
+   import warnings
+   warnings.filterwarnings('ignore')
+   import sys
+   from sklearn.externals import joblib
+   from PIL import Image
+   import numpy as np
+   import matplotlib.pyplot as plt
+   import torch
+   import time
+   from torch.autograd import Variable
+   from glob import glob
+   import os
+   import torch.nn as nn
+   from torch.optim import lr_scheduler
+   from torch import optim
+   from torchvision.datasets import ImageFolder
+   from torchvision.utils import make_grid
+   import shutil
+   from torchvision import transforms
+   from torchvision import models
+   from torchtext import data, datasets
+   from nltk import ngrams
+   from torchtext.vocab import GloVe, Vectors
+   from collections import defaultdict
+   data_path = r'D:\kaggle\data\spooky-author-identification\a'[: -1]
+   ```
+
+   
