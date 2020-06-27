@@ -112,6 +112,7 @@
 
 1. pytorch
    1. 写完了猫狗demo，可以跑下测试机数据去kaggle上交一发
+   2. backword使用的变量比如是torch，不能转为np后再转torch，这样会无法获取历史值？
 2. mlp
    1. 最常见的塔状设计：1024ReLU->512ReLU->256ReLU（来自Coogle推荐系统文章
 3. rnn
