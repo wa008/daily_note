@@ -5,8 +5,12 @@
 1. 需要被copy的代码
 2. 需要多看几遍的重要知识
 3. 正在学习的方向和进度
-   1. nlp：kaggle跟一个nlp的比赛。Spooky Author Identification
+   1. nlp：kaggle跟一个nlp的比赛。Spooky Author Identification，验证集准确率71%
    2. 看书
+   3. 近期比赛
+      1. Real or Not? NLP with Disaster Tweets，ongoing
+      2. Kaggle，Cornell Birdcall Identification，2020.9.8
+      3. [学生答题正确性预测](https://www.biendata.xyz/competition/chaindream_mooccube_task2/)，2020.11.15
 
 ### 可视化
 
