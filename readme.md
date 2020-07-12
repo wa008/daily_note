@@ -2,11 +2,9 @@
 
 ### doing
 
-1. 浪潮之巅上册
-2. lstm最后一层隐藏层和输出层的区别：lstm只有隐藏层和记忆细胞，没有输出层，因此使用隐藏层作为下一线性层的输入是正确的。
 3. Real or Not? NLP with Disaster Tweets，ongoing，已经有人score=1
 4. Attention
-   1. 论文：[Attention Is All You Need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
+   1. 论文：[Attention Is All You Need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)，2 Background
    2. 博客：[Attention? Attention! - Lil'Log](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)
 
 ### todo
@@ -18,3 +16,5 @@
 ### done
 
 1. NLP入门，Kaggle比赛，Spooky Author Identification，验证集准确率71%
+2. 浪潮之巅上册，6 / 17
+3. lstm最后一层隐藏层和输出层的区别：lstm只有隐藏层和记忆细胞，没有输出层，因此使用隐藏层作为下一线性层的输入是正确的。
