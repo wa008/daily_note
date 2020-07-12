@@ -2,9 +2,9 @@
 
 ### doing
 
-3. Real or Not? NLP with Disaster Tweets，ongoing，已经有人score=1
-4. Attention
-   1. 论文：[Attention Is All You Need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)，2 Background
+1. Real or Not? NLP with Disaster Tweets，ongoing，已经有人score=1
+2. Attention
+   1. ·论文：[Attention Is All You Need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)，2 Background
    2. 博客：[Attention? Attention! - Lil'Log](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)
 
 ### todo
