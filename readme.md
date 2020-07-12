@@ -3,7 +3,7 @@
 ### doing
 
 1. 浪潮之巅上册
-2. lstm最后一层隐藏层和输出层的区别
+2. lstm最后一层隐藏层和输出层的区别：lstm只有隐藏层和记忆细胞，没有输出层，因此使用隐藏层作为下一线性层的输入是正确的。
 3. Real or Not? NLP with Disaster Tweets，ongoing，已经有人score=1
 4. Attention
    1. 论文：[Attention Is All You Need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)
