@@ -11,6 +11,7 @@
 ### todo
 1. Kaggle，Cornell Birdcall Identification，2020.9.8
 2. [学生答题正确性预测](https://www.biendata.xyz/competition/chaindream_mooccube_task2/)，2020.11.15
+3. [腾讯的黑灰产对抗实战](https://mp.weixin.qq.com/s/JO4xbmGenjZnt_1tJBO4jA)
 
 ### done
 1. NLP入门，Kaggle比赛，Spooky Author Identification，验证集准确率71%
