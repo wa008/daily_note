@@ -1,11 +1,18 @@
 ## DO LIST
 
 ### doing
-1. Real or Not? NLP with Disaster Tweets，ongoing，已经有人score=1
-2. Attention
+1. GBDT: 一种机器学习算法，xgboost和lightGBM是基于GBDT的算法实现
+   1. [网友博客 博客园](https://www.cnblogs.com/pinard/p/6140514.html)
+   2. [网友博客 简书](https://www.jianshu.com/p/005a4e6ac775)
+   3. lightGBM: [paper](https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf)
+   4. xgboost: [paper](https://arxiv.org/pdf/1603.02754.pdf)
+2. Real or Not? NLP with Disaster Tweets，ongoing，已经有人score=1
+3. Attention
    1. 论文：[Attention Is All You Need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)，2 Background
    2. 博客：[Attention? Attention! - Lil'Log](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)
 4. coursera: nlp from deeplearning.ai
+   1. space vector done。因为视频不能播放，全靠作业的Tips完成了作业，知识吸收的不好，后面要更深入地上课了。
+      1. 对每个词，分别统计在正样本和负样本中出现的频率，log(pos) - log(neg)作为词的统计指标，以此进行预测。
 
 ### todo
 1. Kaggle，Cornell Birdcall Identification，2020.9.8
