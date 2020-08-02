@@ -4,7 +4,7 @@
 2. Python
     1. time模块
     
-       ```
+       ```python
        # time时间格式转换
        dt = "2020-07-29 12:00:00"
    timeArray = time.strptime(dt, "%Y-%m-%d %H:%M:%S") # 标准时间格式 转化为 时间数组
