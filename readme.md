@@ -13,6 +13,10 @@
 4. coursera: nlp from deeplearning.ai
    1. space vector done。因为视频不能播放，全靠作业的Tips完成了作业，知识吸收的不好，后面要更深入地上课了。
       1. 对每个词，分别统计在正样本和负样本中出现的频率，log(pos) - log(neg)作为词的统计指标，以此进行预测。
+   2. NLP with Probabilistic Model
+      1. week 1: auto correct, use insert, delete, replace, 使用尽量少的操作把长度为m的string修改为长度为n的string，O(m*n), done
+5. translate-coursera.org: 
+   1. [translate NLP with Probabilistic Model coursra](https://translate-coursera.org/new_gtc/app/#/app/course_detail/LBkkbZLiEemsugp4Hlq9wA)
 
 ### todo
 1. Kaggle，Cornell Birdcall Identification，2020.9.8
