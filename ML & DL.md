@@ -159,5 +159,3 @@
    from collections import defaultdict
    data_path = r'D:\kaggle\data\spooky-author-identification\a'[: -1]
    ```
-
-   
