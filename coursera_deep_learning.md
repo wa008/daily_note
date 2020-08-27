@@ -20,3 +20,6 @@
 
 ## week 2
 
+1. Mini-batch-gradient descent
+   1. Batch_size = 2^x, 一般速度更快，性价比更高。
+   2. 
