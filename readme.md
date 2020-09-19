@@ -17,7 +17,7 @@
       1. week 1: auto correct, use insert, delete, replace, 使用尽量少的操作把长度为m的string修改为长度为n的string，O(m*n), done
 5. translate-coursera.org: 
    1. [translate NLP with Probabilistic Model coursra](https://translate-coursera.org/new_gtc/app/#/app/course_detail/LBkkbZLiEemsugp4Hlq9wA)
-
+6. GRU、LSTM，是在RNN基础上添加不同的门控单元，比如添加长期记忆，长期记忆消除因子。那么不同的场景添加符合业务的门控单元，或许也能学习到相应的内容。
 ### todo
 1. Kaggle，Cornell Birdcall Identification，2020.9.8
 2. [学生答题正确性预测](https://www.biendata.xyz/competition/chaindream_mooccube_task2/)，2020.11.15
