@@ -72,6 +72,17 @@
       c = np.dot(a, b) # 点乘
       ```
 
+### NLP
+
+1. 分词库
+
+   ```
+   from sklearn.feature_extraction.text import CountVectorizer
+   vec = CountVectorizer(ngram_range=(2, 2)).fit(corpus) # 两个相邻单词作为一组
+   ```
+
+   
+
 ### ML
 
 1. sklearn
