@@ -1,15 +1,20 @@
 ## DO LIST
 
 ### doing
-1. kaggle
+1. 日常
+   1. 早上：李宏毅的课
+   2. 日常：deep learning - the batch+博客
+   3. 晚上：kaggle
+2. kaggle
    1. 预测：[Answer Correctness Prediction](https://www.kaggle.com/c/riiid-test-answer-prediction/overview)
    2. Real or Not? NLP with Disaster Tweets，ongoing，已经有人score=1
-2. Attention+transformer+bert
+3. 李宏毅的课
+4. Attention+transformer+bert
    1. 论文：[Attention Is All You Need](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)，2 Background
    2. 李宏毅课件+youtube讲解
    3. 博客：[Attention? Attention! - Lil'Log](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)
    4. [美团博客实践](https://tech.meituan.com/2020/04/16/transformer-in-meituan.html)
-3. 《深度学习》，系统地学一遍
+5. 《深度学习》，系统地学一遍
    1. RNN反向传播怎么处理多轮的梯度：看《深度学习》中RNN的反向传播
 ### todo
 1. Kaggle，Cornell Birdcall Identification，2020.9.8

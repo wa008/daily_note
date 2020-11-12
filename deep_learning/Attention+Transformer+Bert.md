@@ -14,11 +14,16 @@
    2. LSTM：复杂的RNN
    3. Attention：注意力机制，可以应用到循环网络场景
    4. Self-attention：可以替代RNN，但怎么用一个输出描述n个输入？
+      1. 链接上线文
+      2. 支持并行
    5. seq2seq：利用RNN，解决输入输出长度问题。可以用于不定长输入和输出
    6. Transformer：用self-attention替换了RNN的seq2seq结构。但整个结构还不太懂
    7. Bert：pre-train训练出一个Embedding，再进行微调？
       1. pre-train：训练很吃资源。有各种pre-train的方法
          1. bert用到的微调就是挡住一部分输入，用周围的输入来预测挡住的输入。spambert即挡住连续多个输入
+            1. 挡住
+            2. 替换
+            3. 不替换
          2. UniLM看来很叼的样子，支持多输入多输出结构、语言模型结构、seq2seq结构
       2. 微调：各种微调方法
          1. 只微调pre-train后面的模型结构
