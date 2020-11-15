@@ -25,6 +25,8 @@
 6. XGBoost相关
    1. lightGMB
    2. catboost
+7. course
+   1. coursera: 其他类型的课程，比如Google认证证书
 
 ### done
 1. kaggle
