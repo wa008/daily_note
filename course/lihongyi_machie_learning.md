@@ -21,7 +21,9 @@ update from 2020.11.11
 | 11.12      | word embedding             | done                                      |
 | 11.14      | 四个小时学习，作业五六七八 | 作业五2/8,作业六2/8,作业七２/6,作业八done |
 | 11.15      | 四个小时学习，作业九       | 除了BERT，done                            |
-| 11.16      | GAN                        | 1/10 48min                                |
+| 11.16      | GAN 1/10                   | done                                      |
+| 11.17      | GAN 3/10                   | done                                      |
+| 11.18      | GAN 4/10                   | done                                      |
 
 
 
@@ -66,6 +68,9 @@ update from 2020.11.11
        2. 每轮分别迭代生成和评估的network
        3. Generator: 自下而上，从局部到整体
        4. Dsicriminator: 自上而下，从整体到局部
+    2. 第四节
+       1. KL divergence
+       2. Jensen-Shannon divergence
 
 
 
