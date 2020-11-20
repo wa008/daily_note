@@ -24,6 +24,8 @@ update from 2020.11.11
 | 11.16      | GAN 1/10                   | done                                      |
 | 11.17      | GAN 3/10                   | done                                      |
 | 11.18      | GAN 4/10                   | done                                      |
+| 11.19      | GAN 5/10                   | Done                                      |
+| 11.20      | GAN 6/10                   | todo                                      |
 
 
 
@@ -71,6 +73,8 @@ update from 2020.11.11
     2. 第四节
        1. KL divergence
        2. Jensen-Shannon divergence
+    3. 第五节fGAN
+       1. 不同的f函数，衡量部分会是不同的函数，比如KL 散度，Reverse KL
 
 
 
