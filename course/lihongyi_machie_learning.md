@@ -15,17 +15,17 @@ update from 2020.11.11
 
 ## 进展
 
-| 日期       | 计划                       | 进展                                      |
-| :--------- | -------------------------- | ----------------------------------------- |
-| 11.11 周三 | 制定计划                   | 制定计划                                  |
-| 11.12      | word embedding             | done                                      |
-| 11.14      | 四个小时学习，作业五六七八 | 作业五2/8,作业六2/8,作业七２/6,作业八done |
-| 11.15      | 四个小时学习，作业九       | 除了BERT，done                            |
-| 11.16      | GAN 1/10                   | done                                      |
-| 11.17      | GAN 3/10                   | done                                      |
-| 11.18      | GAN 4/10                   | done                                      |
-| 11.19      | GAN 5/10                   | Done                                      |
-| 11.20      | GAN 6/10                   | todo                                      |
+| 日期       | 计划                       | 进展                                                         |
+| :--------- | -------------------------- | ------------------------------------------------------------ |
+| 11.11 周三 | 制定计划                   | 制定计划                                                     |
+| 11.12      | word embedding             | done                                                         |
+| 11.14      | 四个小时学习，作业五六七八 | 作业五2/8,作业六2/8,作业七２/6,作业八done                    |
+| 11.15      | 四个小时学习，作业九       | 除了BERT，done                                               |
+| 11.16      | GAN 1/10                   | done                                                         |
+| 11.17      | GAN 3/10                   | done                                                         |
+| 11.18      | GAN 4/10                   | done                                                         |
+| 11.19      | GAN 5/10                   | done                                                         |
+| 11.21      | META learning and so on    | META learning done;Meta learning - LSTM todo;life-long learning done;RL done;Advanced Version todo |
 
 
 
@@ -75,6 +75,14 @@ update from 2020.11.11
        2. Jensen-Shannon divergence
     3. 第五节fGAN
        1. 不同的f函数，衡量部分会是不同的函数，比如KL 散度，Reverse KL
+11. Meta learning 
+    1. 让学习一个具有学习f函数的F函数，F产出f，f产出数据结果
+    2. Meta learning-Gradient descent LSTM:todo
+12. life-long learning
+    1. 终身学习，学完一个再学习另一个；顺序很重要
+13. Reinforcement learning
+    1. 对抗学习，obs+actor+reward，找到使得reward最大的actor
+    2. 如果reward无法微分(求导)，那就用policy gradient硬train一发
 
 
 
