@@ -18,9 +18,12 @@
       2. 支持并行
    5. seq2seq：利用RNN，解决输入输出长度问题。可以用于不定长输入和输出
    6. Transformer：用self-attention替换了RNN的seq2seq结构。但整个结构还不太懂
-   7. Bert：pre-train训练出一个Embedding，再进行微调？
+   7. ELMo
+      1. 利用LSTM预测next token
+      2. 可以双向，但左右两段是没有交汇的
+   8. Bert：pre-train训练出一个Embedding，再进行微调？
       1. pre-train：训练很吃资源。有各种pre-train的方法
-         1. bert用到的微调就是挡住一部分输入，用周围的输入来预测挡住的输入。spambert即挡住连续多个输入
+         1. bert训练就是挡住一部分输入，用周围的输入来预测挡住的输入。spambert即挡住连续多个输入
             1. 挡住
             2. 替换
             3. 不替换
@@ -29,8 +32,8 @@
          1. 只微调pre-train后面的模型结构
          2. 微调整个模型，包括pre-train
          3. 针对pre-train部分，只微调一部分参数，微调部分称为adapter
-
-
+   9. ernie
+      1. 
 
 
 
@@ -49,6 +52,18 @@
       1. 全网络，Mask一部分，类似Bert的训练
       2. 只能看左边的信息，类似language model
       3. 包含encode 和 decode，encode可以看全部信息，decode只能看左边的信息。类似seq2seq模型
+3. 其他预训练模型
+   1. fast text： 利用英文的每个字母，生成Embedding vector
+   2. ELMo - LSTM
+   3. bert - self-attention
+   4. Glove 不考虑上下文？
+
+
+
+### NLP 问题
+
+1. QA问题
+2. 机器翻译
 
 
 
