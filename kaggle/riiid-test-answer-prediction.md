@@ -25,6 +25,30 @@
   + `tag`: one tag codes for the lecture. The meaning of the tags will not be provided, but these codes are sufficient for clustering the lectures together.
   + `type_of`: brief description of the core purpose of the lecture
 
+### 大佬notebook
+
+kaggle-riid 0.772
+
+1. lecture
+   1. 对type和partof做onehot处理，最后置为0/1
+   2. userid参加lecture的次数
+   3. userid参加讲座数/（lecture+question数）
+2. user / content / task_container  下 count / sum / std / cerrectness
+3. user 尝试 content 的次数
+4. quetion中的part字段
+5. userid解题的平均时间，userid解当前题目的时间,contentid解题的平均时间，时间差
+6. timestamp变 hour？
+7. Lagtime： 当前时间与userid下最大时间的差值
+8. tags 变 onehot
+9. bundle_id
+10. Part_bundle_id
+11. explanation_cum
+12. prior_question_had_explanation
+
+
+
+0.773 todo
+
 
 
 ### EDA 
