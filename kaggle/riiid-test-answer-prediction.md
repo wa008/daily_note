@@ -44,6 +44,9 @@ kaggle-riid 0.772
 10. Part_bundle_id
 11. explanation_cum
 12. prior_question_had_explanation
+13. 树模型无法学习除法、减法，多构造除法特征
+14. tag cum求和、计数
+15. 数据泄露：groupby中除了cumcount、cumsum，都可能存在泄露问题；max_time_stamp
 
 
 
