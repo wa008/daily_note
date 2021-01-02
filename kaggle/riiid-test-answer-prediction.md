@@ -72,3 +72,13 @@ kaggle-riid 0.772
 
 
 ### 实验结果
+
+1. 针对userid，contentid，task_containid，只有correctness, val_score = 0.733818
+2. training's auc: 0.769276    valid_1's auc: 0.734202
+   1. 减少训练集到 tail(30)
+   2. 添加userid、contetnid、task_containid下的 correct count、uncorrect count
+3. training's auc: 0.773209	valid_1's auc: 0.734832
+   1. simplemodel: train: 0.75991, test:0.73361
+   2. 更新特征delta_prior_question_elapsed_time
+4. 修改样本
+5. 添加user_id_prior_question_elapsed_time_mean特征
