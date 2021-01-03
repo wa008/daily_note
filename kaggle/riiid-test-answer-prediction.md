@@ -80,5 +80,26 @@ kaggle-riid 0.772
 3. training's auc: 0.773209	valid_1's auc: 0.734832
    1. simplemodel: train: 0.75991, test:0.73361
    2. 更新特征delta_prior_question_elapsed_time
-4. 修改样本
-5. 添加user_id_prior_question_elapsed_time_mean特征
+4. 修改样本 train: 0.75830, test:0.72757
+5. 添加user_id_prior_question_elapsed_time_mean特征 simple model train: 0.75849, test:0.72257
+   1. training's auc: 0.755309	valid_1's auc: 0.730538
+6. train: 0.75966, test:0.72584
+   1. 新修改样本
+7. 添加特征user_id_prior_question_elapsed_time_mean
+   1. train: 0.75986, test:0.72247
+8. 添加user_lecture_count; 
+   1. train: 0.7596598700, test:0.7258373359
+9. 添加user_question_count;
+   1. train: 0.7597523969, test:0.7268702075
+10. train: 0.7597611475, test:0.7281686644
+
+结论：提升0.002
+
+1. 添加user qustion tag count; lecture tag
+2. 修改训练集抽样方式
+
+
+
+#### 修改0.783的开源版本
+
+1. 添加tag count特征
