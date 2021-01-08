@@ -16,6 +16,7 @@
    4. [美团博客实践](https://tech.meituan.com/2020/04/16/transformer-in-meituan.html)
 5. 《深度学习》，系统地学一遍
    1. RNN反向传播怎么处理多轮的梯度：看《深度学习》中RNN的反向传播
+6. [语言模型和视觉的融合才是未来？](https://blog.deeplearning.ai/blog/the-batch-new-year-wishes-from-fei-fei-li-harry-shum-ayanna-howard-ilya-sutskever-matthew-mattina?_gl=1*lg4056*_ga*MTQ2Njg4ODMxMi4xNTk3OTc1NDQy*_ga_FNZ5N2KPET*MTYxMDA4MTk2Ni4yLjAuMTYxMDA4MTk2Ni4w)
 ### todo
 1. Kaggle，Cornell Birdcall Identification，2020.9.8
 2. [学生答题正确性预测](https://www.biendata.xyz/competition/chaindream_mooccube_task2/)，2020.11.15
