@@ -4,7 +4,7 @@ Natural language processing
 
 | 论文                                                         | 20%  | 40%  | 60%  | 80%  | 100% |
 | ------------------------------------------------------------ | ---- | ---- | ---- | ---- | ---- |
-| LSTM-看书                                                    |      |      |      |      |      |
+| LSTM-看书                                                    | +    | +    | +    |      |      |
 | [Transformer](https://arxiv.org/pdf/1706.03762.pdf)          |      |      |      |      |      |
 | [BERT](https://arxiv.org/pdf/1810.04805.pdf)                 |      |      |      |      |      |
 | [albert](https://arxiv.org/pdf/1909.11942.pdf)               |      |      |      |      |      |
