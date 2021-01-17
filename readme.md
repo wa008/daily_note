@@ -7,6 +7,7 @@
    3. 晚上：kaggle
 2. kaggle
    1. 预测：[Answer Correctness Prediction](https://www.kaggle.com/c/riiid-test-answer-prediction/overview)
+      1. 跑了个transformer in pytorch 的demo，其整体结构就是输入一个向量，输出一个向量
    2. Real or Not? NLP with Disaster Tweets，ongoing，已经有人score=1
 3. 李宏毅的课
 4. Attention+transformer+bert
