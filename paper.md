@@ -6,10 +6,10 @@ Natural language processing
 | ------------------------------------------------------------ | ---- | ---- | ---- | ---- | ---- |
 | LSTM-看书                                                    | +    | +    | +    |      |      |
 | [Transformer](https://arxiv.org/pdf/1706.03762.pdf)          | +    | +    | +    |      |      |
-| [BERT](https://arxiv.org/pdf/1810.04805.pdf)                 | +    |      |      |      |      |
-| [albert](https://arxiv.org/pdf/1909.11942.pdf)               |      |      |      |      |      |
+| [BERT](https://arxiv.org/pdf/1810.04805.pdf)                 | +    | +    |      |      |      |
+| [albert](https://arxiv.org/pdf/1909.11942.pdf)               | +    |      |      |      |      |
 | [Emotion-Cause Pair Extraction](https://arxiv.org/pdf/1906.01267.pdf) |      |      |      |      |      |
-| XLNet                                                        |      |      |      |      |      |
+| XLNet                                                        | +    |      |      |      |      |
 
 读paper的方法
 
