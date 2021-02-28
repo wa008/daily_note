@@ -9,7 +9,10 @@ Natural language processing
 | [BERT](https://arxiv.org/pdf/1810.04805.pdf)                 | +    | +    |      |      |      |
 | [albert](https://arxiv.org/pdf/1909.11942.pdf)               | +    |      |      |      |      |
 | [Emotion-Cause Pair Extraction](https://arxiv.org/pdf/1906.01267.pdf) | +    | +    |      |      |      |
-| XLNet                                                        | +    |      |      |      |      |
+| [XLNet](https://arxiv.org/pdf/1906.08237.pdf)                | +    |      |      |      |      |
+| [ERNIE](https://arxiv.org/pdf/1904.09223.pdf)                |      |      |      |      |      |
+| [ERNIE 2.0](https://arxiv.org/pdf/1907.12412.pdf)            |      |      |      |      |      |
+| [T5](https://arxiv.org/pdf/1910.10683.pdf)                   |      |      |      |      |      |
 
 读paper的方法
 
