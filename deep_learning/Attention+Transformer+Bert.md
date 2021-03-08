@@ -67,3 +67,23 @@
 
 
 
+# pretrain model
+
+1. fast text：利用英文的每个字母，生成Embedding vector
+2. w2v：predicttive model
+   1. cbow：用周围词预测当前
+   2. Skip-gram：当前词预测周围词
+3. glove：count-base model
+   1. 基于word的共现，构造相关矩阵，非context
+4. ELMo：两个单向LSTM训练
+5. GPT：transformer in LM
+6. Bert
+   1. Unidirectional Transformer -> Biddirectional Transformer
+   2. Standard LM -> Masked LM
+   3. Only Token-level prediction -> Next Sentence prediction
+7. ERNIE
+   1. 多任务，大数据训练
+   2. Ngram mask
+8. XLNET
+9. T5
+
