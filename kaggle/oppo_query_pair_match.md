@@ -5,6 +5,15 @@
 3. ELECTRA
 4. albert
 
+### 用到的点
+
+1. RoBERTa
+2. 线性层 而不是 CLS：提升1.5个点
+3. 并查集增强语料 3.6->5.3，提升0.5左右
+4. lookahead：提升0.5个点
+5. wwm，n-grams：提升0.7个点，主要是epoch不够；50->30
+6. 权重调整：线上提升0.8个点
+
 
 
 # oppo pair match
@@ -74,3 +83,4 @@ pip install git+https://github.com/huggingface/transformers
 ```
 35.5609
 ```
+
