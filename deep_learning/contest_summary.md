@@ -32,7 +32,13 @@ https://www.cnblogs.com/tfknight/p/13353642.html
 
 ### ELECTRA
 
+将GAN中的对抗思想引入NLP领域
 
+生成器：MLM
+
+判别器：判断MLM的结果是否是正确的，即是mask单词是否被替换
+
+生成器和判别器的输入都是Embeding层，可以同时更新Embeding； 生成器可以更新所有的token，判别器只能更新mask掉的token
 
 ### albert
 
