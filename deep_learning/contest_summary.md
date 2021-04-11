@@ -36,7 +36,17 @@ https://www.cnblogs.com/tfknight/p/13353642.html
 
 ### albert
 
+三个大点+1个小点
 
+1. Embeding参数因式分解，emb_size: 768 - > 128
+
+2. 参数共享，各个encoder的attention参数共享
+
+3. NSP -> SOP
+
+   Next sentence predict -> sentence order predict
+
+4. n-grams masking
 
 ### 预训练优化器使用lookahead：会导致学习率特别低，还没找到原因
 
