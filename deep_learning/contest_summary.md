@@ -12,9 +12,31 @@ https://arxiv.org/pdf/1907.08610.pdf
 
 ### RoBERTa
 
+1. 静态mask -> 动态mask
+
+   针对N个epoch划分10 份，对每一份分别做mask，这样导致对每个句子有机会mask不同的token，使mask更加丰富。 maksfor whole word mask是对每一此迭代的样本进行随机的mask
+
+2. with NSP -> without NSP
+
+   使用full-sentence替代，full-sentence比 segment-pair, sentence-pair, doc-sentence效果都更好，因为其可以捕捉到长文本之间的依赖关系
+
+3. 更大的mini-batch
+
+   原BERT batch_size = 256，1M个step，修改为batch_size=8k，31k个step，batch_size提升40倍。更大的batch_size，更小的lr
+
+4. 更多的数据，更长的训练时间
+
+优秀博客
+
+https://www.cnblogs.com/tfknight/p/13353642.html
+
 ### ELECTRA
 
+
+
 ### albert
+
+
 
 ### 预训练优化器使用lookahead：会导致学习率特别低，还没找到原因
 
