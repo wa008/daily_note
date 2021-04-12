@@ -33,7 +33,8 @@
          2. 微调整个模型，包括pre-train
          3. 针对pre-train部分，只微调一部分参数，微调部分称为adapter
    9. ernie
-      1. 
+      1. n-grams
+      2. 大量数据
 
 
 
@@ -70,20 +71,60 @@
 # pretrain model
 
 1. fast text：利用英文的每个字母，生成Embedding vector
+
 2. w2v：predicttive model
+
    1. cbow：用周围词预测当前
    2. Skip-gram：当前词预测周围词
+
 3. glove：count-base model
-   1. 基于word的共现，构造相关矩阵，非context
+
+   **基本概念**：基于全局的token共现次数，构造任意两个token之间的共现矩阵，利用词向量去拟合共现矩阵。
+
+   **公式推导**
+
+   假如两个词之间的距离为d，那么他们的共现值为1/d，作者利用以下的公式表达 词向量和共现值之间的关系
+
+   $$w_i^T\tilde{w_j} + b_i + \tilde{b_j} = log(X_{ij})$$
+
+   其中$w_i, \tilde{w_j}$ 是我们要求解的词向量，$b$ 表示两个词向量的bias term，$b_i=log(X_i)$，利用上述公式，就可以构造loss function了，论文中利用MSE做为loss function，如下
+
+   $$J=\sum\limits_{i,j=1}^{V}{f(X_{ij})(w_i^T\tilde{w_j} + b_i + \tilde{b_j} - log(X_{ij}))^2}$$
+
+   其中$f(X_{ij})$为权重函数，共现次数越多的token，他们的权重越高，共现次数越小，权重越小，共现=0，就不参与loss计算。 同时希望权重函数不能过大。因此设计权重函数如下
+
+   $$ F(x)=\left\{
+   \begin{array}{cases}
+   (x/x_{max})^{\alpha}       &      & {x>x_{max}}\\
+   1     &      & {else}
+   \end{array} \right. $$
+
+   $\alpha$论文中设置0.75，$x_{max}$取100
+
+   **训练过程如下**
+
+   采用了AdaGrad的梯度下降算法，对矩阵中的所有非零元素进行**随机采样**，学习曲率（learning rate）设为0.05。最终学习得到的是两个vector是和 ${x}$ 和 ${\tilde{w}}$，因为${X}$是对称的（symmetric），所以从原理上讲 ${x}$ 和 ${\tilde{w}}$ 也是对称的，他们唯一的区别是初始化的值不一样，而导致最终的值不一样。所以这两者其实是等价的，都可以当成最终的结果来使用。但是为了提高鲁棒性，我们最终会选择两者之和作为最终的vector（两者的初始化不同相当于加了不同的随机噪声，所以能提高鲁棒性）。
+
+   **优秀博客**：http://www.fanyeong.com/2018/02/19/glove-in-detail/
+
 4. ELMo：两个单向LSTM训练
+
 5. GPT：transformer in LM
+
 6. Bert
+
    1. Unidirectional Transformer -> Biddirectional Transformer
    2. Standard LM -> Masked LM
    3. Only Token-level prediction -> Next Sentence prediction
+
 7. ERNIE
+
    1. 多任务，大数据训练
    2. Ngram mask
+
 8. XLNET
+
 9. T5
+
+
 
