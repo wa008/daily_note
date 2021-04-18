@@ -5,78 +5,10 @@
 
 
 
-# 笔记
+### 背景知识
 
-1. attention是在seq2seq的基础上给隐藏层变量添加了新的信息，这些信息=输入层各隐藏层的加权和
-2. NLP中利用样本增强，对原始句子进行反转，能取得一定的效果
-3. 汇总
-   1. RNN：循环网络结构，n个输入，n个输出
-   2. LSTM：复杂的RNN
-   3. Attention：注意力机制，可以应用到循环网络场景
-   4. Self-attention：可以替代RNN，但怎么用一个输出描述n个输入？
-      1. 链接上线文
-      2. 支持并行
-      3. 复杂度为n^2*d；n为序列长度，d为Embeding长度
-   5. seq2seq：利用RNN，解决输入输出长度问题。可以用于不定长输入和输出
-   6. Transformer：用self-attention替换了RNN的seq2seq结构。但整个结构还不太懂
-   7. ELMo
-      1. 利用LSTM预测next token
-      2. 可以双向，但左右两段是没有交汇的
-   8. Bert：pre-train训练出一个Embedding，再进行微调？
-      1. pre-train：训练很吃资源。有各种pre-train的方法
-         1. bert训练就是挡住一部分输入，用周围的输入来预测挡住的输入。spambert即挡住连续多个输入
-            1. 挡住
-            2. 替换
-            3. 不替换
-         2. UniLM看来很叼的样子，支持多输入多输出结构、语言模型结构、seq2seq结构
-      2. 微调：各种微调方法
-         1. 只微调pre-train后面的模型结构
-         2. 微调整个模型，包括pre-train
-         3. 针对pre-train部分，只微调一部分参数，微调部分称为adapter
-   9. ernie
-      1. n-grams
-      2. 大量数据
-
-
-
-# 疑问
-
-1. Transformer解码层为什么多次循环Masked-multi-Head-Attention
-
-# Transformer
-
-1. self-attention中 1/sqrt(k)缩放
-
-   Dot-product attention 和 additive attention 理论复杂度差不多，但是实际上dot-product attention 更快，因此选择了前者。当k较小时，两者的效果差不多，k较大时，dot-product 较差，猜测是k较大时，容易引起梯度出现极小值，因此缩放 1/sqrt(k)，抵消此部分影响。
-
-2. Self-attention中怎么把batch_size 加进去
-
-
-
-
-
-# Bert
-
-1. Contextualized word Embedding: 输入整句话，考虑上下文，输出每个单词的Embedding
-2. Bert and its family
-   1. UniLM
-      1. 全网络，Mask一部分，类似Bert的训练
-      2. 只能看左边的信息，类似language model
-      3. 包含encode 和 decode，encode可以看全部信息，decode只能看左边的信息。类似seq2seq模型
-3. 其他预训练模型
-   1. fast text： 利用英文的每个字母，生成Embedding vector
-   2. ELMo - LSTM
-   3. bert - self-attention
-   4. Glove 不考虑上下文？
-
-
-
-### NLP 问题
-
-1. QA问题
-2. 机器翻译
-
-
+5. seq2seq：利用RNN，解决输入输出长度问题。可以用于不定长输入和输出
+6. Transformer：用self-attention替换了RNN的seq2seq结构
 
 # pretrain model
 
@@ -159,6 +91,87 @@
 9. XLNET
 
 10. T5
+
+11. UniLM看来很叼的样子，支持多输入多输出结构、语言模型结构、seq2seq结构
+
+
+
+# Transformer
+
+1. attention是在seq2seq的基础上给隐藏层变量添加了新的信息，这些信息=输入层各隐藏层的加权和
+
+2. self-attention中 1/sqrt(k)缩放
+
+   Dot-product attention 和 additive attention 理论复杂度差不多，但是实际上dot-product attention 更快，因此选择了前者。当k较小时，两者的效果差不多，k较大时，dot-product 较差，猜测是k较大时，容易引起梯度出现极小值，因此缩放 1/sqrt(k)，抵消此部分影响。
+
+3. Self-attention中怎么把batch_size 加进去：self-attention进行Q、K、V计算时，是三维数组进行的计算，(a, b, c) * (c, x, y)，只要相邻的两维长度相同即可
+
+4. 正则
+
+   1. Residual add 之前进行dropout
+   2. FFN：relu激活之后进行dropout
+
+5. multi-head attention：利用self-attention将多个head concat，再乘以一个转化矩阵
+
+6. FFN有两个线性层，神经元个数：d_model -> dim_feedforward -> d_model；中间层需要activation，末层不需要
+
+7. 影响序列长度依赖性的一个重要因素，就是信号在输入-输出的网络结构中传输的长度，该长度越短，依赖性学习的就越好。因为信息丢失？
+
+8. 从计算复杂度上讲，句子长度n越小，self-attention的性能就优于RNN，因为self-attention的复杂度为 n^2 * d，RNN的复杂度为 n * d ^ 2。那么n很大的时候，self-attention的性能就会下降，要怎么优化呢？
+
+9. attention对模型解释性的贡献
+
+10. 疑问
+
+    1. Transformer解码层为什么都要mask：6层中第一层需要，其他层要不要都行，为了方便都要了
+
+```python
+def __init__(self, d_model, nhead, dim_feedforward=2048, dropout=0.1, activation="relu"):
+    super(TransformerEncoderLayer, self).__init__()
+    self.self_attn = MultiheadAttention(d_model, nhead, dropout=dropout)
+    # Implementation of Feedforward model
+    self.linear1 = Linear(d_model, dim_feedforward)
+    self.dropout = Dropout(dropout)
+    self.linear2 = Linear(dim_feedforward, d_model)
+
+    self.norm1 = LayerNorm(d_model)
+    self.norm2 = LayerNorm(d_model)
+    self.dropout1 = Dropout(dropout)
+    self.dropout2 = Dropout(dropout)
+
+    self.activation = _get_activation_fn(activation)
+
+def __setstate__(self, state):
+    if 'activation' not in state:
+        state['activation'] = F.relu
+    super(TransformerEncoderLayer, self).__setstate__(state)
+
+def forward(self, src: Tensor, src_mask: Optional[Tensor] = None, src_key_padding_mask: Optional[Tensor] = None) -> Tensor:
+    src2 = self.self_attn(src, src, src, attn_mask=src_mask,
+                            key_padding_mask=src_key_padding_mask)[0]
+    src = src + self.dropout1(src2)
+    src = self.norm1(src)
+    src2 = self.linear2(self.dropout(self.activation(self.linear1(src))))
+    src = src + self.dropout2(src2)
+    src = self.norm2(src)
+    return src
+```
+
+
+
+# Bert
+
+1. Contextualized word Embedding: 输入整句话，考虑上下文，输出每个单词的Embedding
+2. Bert and its family
+   1. UniLM
+      1. 全网络，Mask一部分，类似Bert的训练
+      2. 只能看左边的信息，类似language model
+      3. 包含encode 和 decode，encode可以看全部信息，decode只能看左边的信息。类似seq2seq模型
+3. 其他预训练模型
+   1. fast text： 利用英文的每个字母，生成Embedding vector
+   2. ELMo - LSTM
+   3. bert - self-attention
+   4. Glove 不考虑上下文？
 
 
 
