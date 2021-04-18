@@ -22,9 +22,7 @@
 
 1. Mini-batch-gradient descent
    1. Batch_size = 2^x, 一般速度更快，性价比更高。
-   2. 
 
 ![梯度下降时进行梯度平滑处理](/Users/huzhipeng03/Documents/github/daily_note/image/image-20200828093131542.png)
 
 3. rmsprop
-4. 

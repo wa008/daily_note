@@ -16,6 +16,7 @@
    4. Self-attention：可以替代RNN，但怎么用一个输出描述n个输入？
       1. 链接上线文
       2. 支持并行
+      3. 复杂度为n^2*d；n为序列长度，d为Embeding长度
    5. seq2seq：利用RNN，解决输入输出长度问题。可以用于不定长输入和输出
    6. Transformer：用self-attention替换了RNN的seq2seq结构。但整个结构还不太懂
    7. ELMo
@@ -41,7 +42,16 @@
 # 疑问
 
 1. Transformer解码层为什么多次循环Masked-multi-Head-Attention
-2. Batch Norm 和 Layer Norm
+
+# Transformer
+
+1. self-attention中 1/sqrt(k)缩放
+
+   Dot-product attention 和 additive attention 理论复杂度差不多，但是实际上dot-product attention 更快，因此选择了前者。当k较小时，两者的效果差不多，k较大时，dot-product 较差，猜测是k较大时，容易引起梯度出现极小值，因此缩放 1/sqrt(k)，抵消此部分影响。
+
+2. Self-attention中怎么把batch_size 加进去
+
+
 
 
 
@@ -75,7 +85,18 @@
 2. w2v：predicttive model
 
    1. cbow：用周围词预测当前
+
+      将C个周围词的onehot向量求和，乘以 输入Embeding矩阵，变成C个周围词的隐藏层表示；再乘以输出Embeding的转置，变回长度为V的向量，对中间词向量的概率取对数，作为损失函数。 
+
+      反向传播依次更新 输出Embeding矩阵和输出Embeding矩阵。最后还是求和使用吧。
+
    2. Skip-gram：当前词预测周围词
+
+      与cbow同理，只是包含多个损失函数
+
+   3. 其他补充
+
+      1. 为什么需要两次Embeding：容易优化；最后将两者取平均
 
 3. glove：count-base model
 
@@ -107,24 +128,37 @@
 
    **优秀博客**：http://www.fanyeong.com/2018/02/19/glove-in-detail/
 
-4. ELMo：两个单向LSTM训练
+4. cbow vs glove from stanford cs224 lecture02
 
-5. GPT：transformer in LM
+   1. glove：基于计数
+      1. 训练速度快
+      2. 高效使用到了统计数据
+      3. 能捕捉到单词之间的相似性。比如swim 和 swiming
+      4. 对共现次数大的pair过于重视；可以通过限制最大值解决
+   2. cbow：基于预测
+      1. 随词表库大小变动；glove也是这样？
+      2. 在单词相似性之外能捕捉到更复杂pattern
+      3. 可以在其他任务上继续训练，提高性能；类似pretrain, finetune的形势
+      4. 没有完全利用统计数据
 
-6. Bert
+5. ELMo：两个单向LSTM训练
+
+6. GPT：transformer in LM
+
+7. Bert
 
    1. Unidirectional Transformer -> Biddirectional Transformer
    2. Standard LM -> Masked LM
    3. Only Token-level prediction -> Next Sentence prediction
 
-7. ERNIE
+8. ERNIE
 
    1. 多任务，大数据训练
    2. Ngram mask
 
-8. XLNET
+9. XLNET
 
-9. T5
+10. T5
 
 
 
