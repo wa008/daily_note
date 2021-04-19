@@ -8,7 +8,7 @@ https://arxiv.org/pdf/1907.08610.pdf
 
 有点类似 Nesterov Momentum 的思想，只是把k步变成了1步
 
-![image-20210409101348867](../picture/image-20210409101348867.png)
+![image-20210409101348867](../image/image-20210409101348867.png)
 
 ### RoBERTa
 

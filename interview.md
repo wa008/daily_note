@@ -1,6 +1,6 @@
 2021-04-11
 
-1. 点击过滤模型的提升原因
+1. 过滤模型的提升原因
 2. n-grams 和 whold word mask混用，一个word两个token会被算作是一个token，mask token占比15%
 3. albert相比原生bert做了哪些优化
 4. cbow和glove的区别
