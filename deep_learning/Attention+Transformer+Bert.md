@@ -70,7 +70,7 @@
    2. cbow：基于预测
       1. 随词表库大小变动；glove也是这样？
       2. 在单词相似性之外能捕捉到更复杂pattern
-      3. 可以在其他任务上继续训练，提高性能；类似pretrain, finetune的形势
+      3. 可以在其他任务上继续训练，提高性能；类似pretrain, finetune的形式
       4. 没有完全利用统计数据
 
 5. ELMo：两个单向LSTM训练
@@ -98,7 +98,7 @@
 
 # Transformer
 
-1. attention是在seq2seq的基础上给隐藏层变量添加了新的信息，这些信息=输入层各隐藏层的加权和
+1. attention是在seq2seq的基础上给隐藏层变量添加了新的信息，这些信息=输入层各隐藏向量的加权和
 
 2. self-attention中 1/sqrt(k)缩放
 
@@ -113,11 +113,11 @@
 
 5. multi-head attention：利用self-attention将多个head concat，再乘以一个转化矩阵
 
-6. FFN有两个线性层，神经元个数：d_model -> dim_feedforward -> d_model；中间层需要activation，末层不需要
+6. FFN有两个线性层，神经元个数：d_model -> dim_feedforward -> d_model；中间层用relu激活，末层不需要
 
 7. 影响序列长度依赖性的一个重要因素，就是信号在输入-输出的网络结构中传输的长度，该长度越短，依赖性学习的就越好。因为信息丢失？
 
-8. 从计算复杂度上讲，句子长度n越小，self-attention的性能就优于RNN，因为self-attention的复杂度为 n^2 * d，RNN的复杂度为 n * d ^ 2。那么n很大的时候，self-attention的性能就会下降，要怎么优化呢？
+8. 从计算复杂度上讲，句子长度n越小，self-attention的性能就优于RNN，因为self-attention的复杂度为 n ^ 2 * d，RNN的复杂度为 n * d ^ 2。那么n很大的时候，self-attention的性能就会下降，要怎么优化呢？
 
 9. attention对模型解释性的贡献
 
@@ -167,11 +167,6 @@ def forward(self, src: Tensor, src_mask: Optional[Tensor] = None, src_key_paddin
       1. 全网络，Mask一部分，类似Bert的训练
       2. 只能看左边的信息，类似language model
       3. 包含encode 和 decode，encode可以看全部信息，decode只能看左边的信息。类似seq2seq模型
-3. 其他预训练模型
-   1. fast text： 利用英文的每个字母，生成Embedding vector
-   2. ELMo - LSTM
-   3. bert - self-attention
-   4. Glove 不考虑上下文？
 
 
 
