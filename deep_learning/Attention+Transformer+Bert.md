@@ -77,6 +77,8 @@
 
 6. GPT：transformer in LM
 
+   1. 单向，每个token之前看到之前的token
+
 7. Bert
 
    1. Unidirectional Transformer -> Biddirectional Transformer
